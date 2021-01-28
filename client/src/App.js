@@ -17,7 +17,7 @@ class App extends Component {
 			loading: true
 		};
 		this.url = "https://currency-converter-manjaka13.herokuapp.com";
-		this.port = process.env.PORT || 80;
+		this.port = null;
 		this.handle_events = this.handle_events.bind(this);
 		this.list = this.list.bind(this);
 		this.request = this.request.bind(this);
@@ -29,7 +29,7 @@ class App extends Component {
 		this.setState({
 			loading: true
 		});
-		fetch(this.url + ":" + this.port + "/convert", {
+		fetch(this.url + (this.port ? (":" + this.port) : "" ) + "/convert", {
 	        method: "POST",
 	        headers: {
 	       		"Content-Type": "application/json"
@@ -56,7 +56,7 @@ class App extends Component {
 
 	//Get list of currencies and update state
 	list() {
-		fetch(this.url +":" + this.port + "/list", {
+		fetch(this.url + (this.port ? (":" + this.port) : "" ) + "/convert", {
 	        method: "POST"
 		}).then(response => {
 	        return response.json();
@@ -134,7 +134,7 @@ class App extends Component {
 				<div className="window">
 					
 					<div className="head">
-						<h1 className="title title-sm">Currency<span className="part2"> converter</span></h1>
+						<h1 className="title title-sm">TEST<span className="part2"> converter</span></h1>
 						<ul className="social">
 							{mapped_social}
 						</ul>
