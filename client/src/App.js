@@ -16,7 +16,7 @@ class App extends Component {
 			currencies: ["EUR", "MGA"],
 			loading: true
 		};
-		this.post = process.env.PORT || 3300;
+		this.post = process.env.PORT || 80;
 		this.handle_events = this.handle_events.bind(this);
 		this.list = this.list.bind(this);
 		this.request = this.request.bind(this);
