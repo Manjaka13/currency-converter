@@ -16,6 +16,7 @@ class App extends Component {
 			currencies: ["EUR", "MGA"],
 			loading: true
 		};
+		this.url = "https://currency-converter-manjaka13.herokuapp.com";
 		this.port = process.env.PORT || 80;
 		this.handle_events = this.handle_events.bind(this);
 		this.list = this.list.bind(this);
@@ -28,7 +29,7 @@ class App extends Component {
 		this.setState({
 			loading: true
 		});
-		fetch("http://localhost:" + this.port + "/convert", {
+		fetch(this.url + ":" + this.port + "/convert", {
 	        method: "POST",
 	        headers: {
 	       		"Content-Type": "application/json"
@@ -55,7 +56,7 @@ class App extends Component {
 
 	//Get list of currencies and update state
 	list() {
-		fetch("http://localhost:" + this.port + "/list", {
+		fetch(this.url +":" + this.port + "/list", {
 	        method: "POST"
 		}).then(response => {
 	        return response.json();
