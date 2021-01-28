@@ -57,7 +57,7 @@ class App extends Component {
 
 	//Get list of currencies and update state
 	list() {
-		fetch(this.url + (this.port ? (":" + this.port) : "" ) + "/convert", {
+		fetch(this.url + (this.port ? (":" + this.port) : "" ) + "/list", {
 	        method: "POST"
 		}).then(response => {
 	        return response.json();
