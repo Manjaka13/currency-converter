@@ -16,6 +16,7 @@ class App extends Component {
 			currencies: ["EUR", "MGA"],
 			loading: true
 		};
+		this.post = process.env.port || 3300;
 		this.handle_events = this.handle_events.bind(this);
 		this.list = this.list.bind(this);
 		this.request = this.request.bind(this);
@@ -27,7 +28,7 @@ class App extends Component {
 		this.setState({
 			loading: true
 		});
-		fetch("http://localhost:3300/convert", {
+		fetch("http://localhost:" + this.port + "/convert", {
 	        method: "POST",
 	        headers: {
 	       		"Content-Type": "application/json"
@@ -54,7 +55,7 @@ class App extends Component {
 
 	//Get list of currencies and update state
 	list() {
-		fetch("http://localhost:3300/list", {
+		fetch("http://localhost:" + this.port + "/list", {
 	        method: "POST"
 		}).then(response => {
 	        return response.json();
