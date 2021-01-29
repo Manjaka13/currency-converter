@@ -5,7 +5,7 @@ const path = require("path");
 const app = new Express();
 const Currency = require("./currency");
 const curr = new Currency();
-const port = process.env.PORT || 3300;
+const port = /*process.env.PORT || 3300*/80;
 
 //Middlewares
 app.use(cors());
@@ -27,7 +27,7 @@ app.post("/convert", (req, res) => {
 //List of currencies
 app.post("/list", (req, res) => {
 	curr.list((err, result) => {
-		//console.log(err, result);
+		console.log(err, result);
 		if(err)
 			res.json(err);
 		else
