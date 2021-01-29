@@ -2,7 +2,8 @@ var https = require("https");
 
 class Currency {
 	constructor() {
-		this.api_key = process.env.CURRENCY_API_KEY || "";
+		//You should store API key in .env file :)
+		this.api_key = "3e23c68c2ce17355e03a";
 	}
 
 	//Request conversion
