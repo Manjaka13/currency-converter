@@ -16,8 +16,8 @@ class App extends Component {
 			currencies: ["EUR", "MGA"],
 			loading: true
 		};
-		//this.url = "https://currency-converter-manjaka13.herokuapp.com";
-		this.url = "http://localhost";
+		this.url = "https://currency-converter-manjaka13.herokuapp.com";
+		//this.url = "http://localhost";
 		this.port = 80;
 		this.handle_events = this.handle_events.bind(this);
 		this.list = this.list.bind(this);
