@@ -5,7 +5,7 @@ const path = require("path");
 const app = new Express();
 const Currency = require("./currency");
 const curr = new Currency();
-const port = /*process.env.PORT || 3300*/80;
+const port = process.env.PORT || 3300;
 
 //Middlewares
 app.use(cors());
