@@ -18,7 +18,7 @@ class App extends Component {
 		};
 		this.url = "https://currency-converter-manjaka13.herokuapp.com";
 		//this.url = "http://localhost";
-		this.port = 8080;
+		//this.port = 8080;
 		this.handle_events = this.handle_events.bind(this);
 		this.list = this.list.bind(this);
 		this.request = this.request.bind(this);
