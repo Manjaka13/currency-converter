@@ -135,7 +135,7 @@ class App extends Component {
 				<div className="window">
 					
 					<div className="head">
-						<h1 className="title title-sm">TEST<span className="part2"> converter</span></h1>
+						<h1 className="title title-sm">Currency<span className="part2"> converter</span></h1>
 						<ul className="social">
 							{mapped_social}
 						</ul>

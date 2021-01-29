@@ -13,9 +13,9 @@ app.use(Express.static(path.join(__dirname, "client", "build")));
 app.use(Express.json());
 
 //Serve default html page
-app.get("/", (req, res) => {
+/*app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "client", "build"));
-});
+});*/
 
 //Request a conversion
 app.post("/convert", (req, res) => {
