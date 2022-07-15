@@ -1,25 +1,36 @@
 {
-  "name": "currency-converter",
-  "version": "1.0.0",
-  "description": "Simple online currency converter made with React.js",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
-  "keywords": [
-    "Currency",
-    "converter",
-    "React.js"
-  ],
-  "author": "Manjaka13",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+	"name": "currency",
+	"version": "0.2.0",
+	"description": "Online service for currency conversion",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"dev": "nodemon src/index.js",
+		"format": "prettier --write .",
+		"lint": "eslint --fix .",
+		"test": "jest"
+	},
+	"keywords": [
+		"currency",
+		"converter",
+		"online"
+	],
+	"jest": {
+		"collectCoverage": true
+	},
+	"author": "Hari13 <manjaka.rajaonson@gmail.com>",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"express": "^4.17.3",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"eslint": "^8.12.0",
+		"eslint-plugin-jest": "^26.5.3",
+		"jest": "^28.1.2",
+		"nodemon": "^2.0.18",
+		"prettier": "^2.6.1"
+	}
 }
