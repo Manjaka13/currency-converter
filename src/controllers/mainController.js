@@ -10,10 +10,18 @@ const mainController = {
     getCurrencyList: (req, res) => {
         currency.getCurrencyList()
             .then((list) => res.json(success("Currencies list", list)))
-            .catch((err) => {
-                res.json(failure(err));
-                console.log(err)
-            });
+            .catch((err) => res.json(failure(err)));
+    },
+
+    // Converts currencies
+    convert: (req, res) => {
+        const { from, to } = req.params;
+        if (from && to)
+            currency.convert(from, to)
+                .then((data) => res.json(success(`Conversion result ${from} => ${to}`, data)))
+                .catch((err) => res.json(failure(err)));
+        else
+            res.json(failure("Please verify your params"));
     }
 };
 
